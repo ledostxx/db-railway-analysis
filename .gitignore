@@ -1,0 +1,50 @@
+# Update your .gitignore with this:
+cat > .gitignore << 'EOF'
+# Python Virtual Environment
+bin/
+lib/
+lib64/
+pyvenv.cfg
+share/
+include/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.ipynb_checkpoints/
+
+# Data files
+data/raw/*
+data/processed/*
+*.json
+*.csv
+*.xlsx
+
+# Keep the .gitkeep files
+!data/.gitkeep
+!images/.gitkeep
+
+# Environment variables & secrets
+.env
+*.key
+.env.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+EOF

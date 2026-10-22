@@ -1,0 +1,26 @@
+% =====================================
+% Verkleinert alle Quarto-Code-Outputs
+% =====================================
+
+\usepackage{fvextra}   % erweitert fancyvrb
+
+% 1) Code-Blöcke (Python-Code)
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{fontsize=\footnotesize,breaklines=true,commandchars=\\\{\}}
+
+% -- Shrink code + outputs without redefining low-level \verbatim --
+\usepackage{fvextra} % bringt Verbatim (FancyVerb) + Extras
+
+% Code-Blöcke (Pandoc "Highlighting") kleiner:
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{fontsize=\footnotesize,breaklines=true,commandchars=\\\{\}}
+
+% Alle normalen verbatim-Outputs auf FancyVerb umbiegen und verkleinern:
+\DefineVerbatimEnvironment{verbatim}{Verbatim}{fontsize=\footnotesize,breaklines=true}
+
+% Falls irgendwo explizit Verbatim (groß) genutzt wird:
+\RecustomVerbatimEnvironment{Verbatim}{Verbatim}{fontsize=\footnotesize,breaklines=true}
+
+% (Optional) Wenn Quarto einen Shaded-Wrapper setzt:
+\usepackage{etoolbox}
+\AtBeginEnvironment{Shaded}{\small}
+
+

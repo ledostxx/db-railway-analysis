@@ -1,0 +1,28 @@
+:root {
+  --code-font-size: 0.85rem;
+  --out-font-size: 0.80rem;
+}
+
+/* Code-Blöcke */
+div.sourceCode pre,
+pre.sourceCode,
+pre code {
+  font-size: var(--code-font-size) !important;
+}
+
+/* Jupyter Output */
+.cell-output,
+.cell-output * {
+  font-size: var(--out-font-size) !important;
+}
+
+/* stdout/stderr */
+.cell-output pre {
+  font-size: var(--out-font-size) !important;
+}
+
+/* manueal page break*/
+.page-break {
+  page-break-before: always;
+}
+

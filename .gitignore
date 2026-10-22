@@ -1,50 +1,47 @@
-# Update your .gitignore with this:
-cat > .gitignore << 'EOF'
-# Python Virtual Environment
+# Python virtual environment (created in the repo root)
 bin/
 lib/
 lib64/
-pyvenv.cfg
-share/
 include/
+share/
+etc/
+pyvenv.cfg
+.venv/
 
 # Python
 __pycache__/
 *.pyc
-*.pyo
-*.pyd
-.Python
-*.so
-*.egg
-*.egg-info/
-dist/
-build/
 .ipynb_checkpoints/
 
-# Data files
+# Data (collected data lives in MongoDB Atlas, not in the repo)
 data/raw/*
 data/processed/*
-*.json
 *.csv
 *.xlsx
+!data/raw/.gitkeep
+!data/processed/.gitkeep
 
-# Keep the .gitkeep files
-!data/.gitkeep
-!images/.gitkeep
-
-# Environment variables & secrets
+# Secrets
 .env
-*.key
 .env.local
+*.key
 
-# IDE
+# Drafts, backups and render artifacts not part of the final project
+Untitled*.ipynb
+*BACKUP*.ipynb
+*-Copy*.ipynb
+stage1_db_delays*
+personal_project_leonard_dost*
+notebooks/
+tex/
+*.log
+
+# IDE / OS
 .idea/
 .vscode/
-*.swp
-*.swo
-*~
-
-# OS
 .DS_Store
-Thumbs.db
-EOF
+
+# Empty scaffolding from the initial setup
+data/
+images/
+src/
